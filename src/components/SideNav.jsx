@@ -17,6 +17,7 @@ import { useAppStore } from "../appStore";
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import PetsIcon from '@mui/icons-material/Pets';
+import { Colors } from "../config/themConfig";
 
 const drawerWidth = 240;
 
@@ -78,8 +79,8 @@ export default function MiniDrawer() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <Box height={30}/>
-      <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
+      <Drawer variant="permanent" open={open}  >
+        <DrawerHeader >
           <IconButton>
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
@@ -88,7 +89,7 @@ export default function MiniDrawer() {
             )}
           </IconButton>
         </DrawerHeader>
-        <List>
+        <List >
           <ListItem disablePadding sx={{ display: "block" }} onClick={()=>{navigate("/")}}>
             <ListItemButton
               sx={{
